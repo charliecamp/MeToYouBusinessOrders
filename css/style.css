@@ -1,0 +1,136 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+}
+
+/* ===========================
+   PAGE
+=========================== */
+
+.loginPage{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+    background:linear-gradient(
+        180deg,
+        #fffdfd 0%,
+        #faeef2 40%,
+        #f4dce5 100%
+    );
+
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo{
+
+    width:190px;
+
+    margin-bottom:25px;
+
+}
+
+/* ===========================
+   WELCOME
+=========================== */
+
+.welcome{
+
+    font-size:28px;
+
+    font-weight:600;
+
+    color:#876272;
+
+    margin-bottom:30px;
+
+}
+
+/* ===========================
+   LOGIN CARD
+=========================== */
+
+.loginCard{
+
+    width:100%;
+
+    max-width:380px;
+
+    background:rgba(255,255,255,.82);
+
+    border-radius:28px;
+
+    padding:35px;
+
+    box-shadow:0 15px 35px rgba(170,120,145,.18);
+
+}
+
+/* ===========================
+   INPUT
+=========================== */
+
+.loginCard input{
+
+    width:100%;
+
+    padding:18px;
+
+    border:2px solid #edd5df;
+
+    border-radius:18px;
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.loginCard button{
+
+    width:100%;
+
+    margin-top:20px;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#c78ca6;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
