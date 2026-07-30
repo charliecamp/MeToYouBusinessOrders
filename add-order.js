@@ -9,10 +9,18 @@
 
 function createOrderNumber() {
 
-    const random = Math.floor(Math.random() * 9000) + 1000;
+    let lastOrderNumber =
+        Number(localStorage.getItem("lastOrderNumber")) || 0;
+
+    lastOrderNumber++;
+
+    localStorage.setItem(
+        "lastOrderNumber",
+        lastOrderNumber
+    );
 
     document.getElementById("orderNumber").value =
-        "MTYD-" + random;
+        "MTYD-" + String(lastOrderNumber).padStart(4, "0");
 
 }
 
@@ -277,7 +285,7 @@ document
     const order = {
 
         orderNumber:
-            document.getElementById("orderNumber").value,
+            orderNumber: "",
 
         customerName:
             document.getElementById("customerName").value,
@@ -324,7 +332,21 @@ document
         items: []
 
     };
+let lastOrderNumber =
+    Number(localStorage.getItem("lastOrderNumber")) || 0;
 
+lastOrderNumber++;
+
+localStorage.setItem(
+    "lastOrderNumber",
+    lastOrderNumber
+);
+
+order.orderNumber =
+    "MTYD-" + String(lastOrderNumber).padStart(4, "0");
+
+document.getElementById("orderNumber").value =
+    order.orderNumber;
     document
         .querySelectorAll(".item-card")
         .forEach(item => {
@@ -374,7 +396,6 @@ document
 // INITIAL SETUP
 // -----------------------------
 
-createOrderNumber();
 
 setTodayDate();
 
