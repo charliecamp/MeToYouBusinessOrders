@@ -417,6 +417,25 @@ document
 .getElementById("depositAmount")
 .addEventListener("input", updateTotals);
 
+const paymentStatus = document.getElementById("paymentStatus");
+
+paymentStatus.addEventListener("change", function () {
+
+    const total = Number(document.getElementById("orderTotal").value) || 0;
+    const deposit = document.getElementById("depositAmount");
+
+    if (this.value === "Not Paid") {
+        deposit.value = 0;
+    }
+
+    if (this.value === "Paid In Full") {
+        deposit.value = total.toFixed(2);
+    }
+
+    updateTotals();
+
+});
+
 const progressSelect = document.getElementById("orderProgress");
 
 const progressSteps = [
