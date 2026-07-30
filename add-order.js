@@ -112,10 +112,21 @@ item.innerHTML = `
 
 <label>Personalised?</label>
 
-<select>
-<option>No</option>
-<option>Yes</option>
+<select class="personalisedSelect">
+    <option value="No">No</option>
+    <option value="Yes">Yes</option>
 </select>
+
+<div class="personalisationBox" style="display:none; margin-top:15px;">
+
+    <label>Personalisation Details</label>
+
+    <textarea
+        class="personalisationDetails"
+        placeholder="Enter the name, message or personalisation required..."
+    ></textarea>
+
+</div>
 
 
 <button class="remove-item">
@@ -127,7 +138,15 @@ item.innerHTML = `
 
 
 itemsContainer.appendChild(item);
+const personalised = item.querySelector(".personalisedSelect");
+const detailsBox = item.querySelector(".personalisationBox");
 
+personalised.addEventListener("change", function () {
+
+    detailsBox.style.display =
+        this.value === "Yes" ? "block" : "none";
+
+});
 
 
 item.querySelector(".remove-item")
