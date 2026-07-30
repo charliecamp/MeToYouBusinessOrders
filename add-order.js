@@ -286,3 +286,48 @@ alert("✨ Order Saved Successfully!");
 
 
 }
+
+
+// ===============================
+// AUTO TOTAL & BALANCE
+// ===============================
+
+function updateTotals() {
+
+    let total = 0;
+
+    document.querySelectorAll("#price").forEach(price => {
+        total += Number(price.value) || 0;
+    });
+
+    const totalBox = document.getElementById("orderTotal");
+    if (totalBox) {
+        totalBox.value = total.toFixed(2);
+    }
+
+    const deposit =
+        Number(document.getElementById("depositAmount")?.value) || 0;
+
+    const balance = total - deposit;
+
+    const balanceBox =
+        document.getElementById("remainingBalance");
+
+    if (balanceBox) {
+        balanceBox.value = balance.toFixed(2);
+    }
+
+}
+
+document.addEventListener("input", function (e) {
+
+    if (
+        e.target.id === "price" ||
+        e.target.id === "depositAmount"
+    ) {
+        updateTotals();
+    }
+
+});
+
+updateTotals();
