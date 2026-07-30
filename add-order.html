@@ -273,6 +273,31 @@ readonly>
 <button type="button" id="addPaymentButton">
     ➕ Add Payment
 </button>
+<div id="paymentForm" style="display:none; margin-top:15px;">
+
+    <label>Payment Date</label>
+    <input type="date" id="paymentDate">
+
+    <label>Amount (£)</label>
+    <input type="number" id="paymentAmount" step="0.01">
+
+    <label>Payment Method</label>
+    <select id="paymentMethodEntry">
+        <option>Cash</option>
+        <option>Bank Transfer</option>
+        <option>Card</option>
+        <option>PayPal</option>
+        <option>Other</option>
+    </select>
+
+    <label>Notes</label>
+    <textarea id="paymentNotes"></textarea>
+
+    <button type="button" id="savePayment">
+        💗 Save Payment
+    </button>
+
+</div>
 
 <label>Remaining Balance (£)</label>
 
