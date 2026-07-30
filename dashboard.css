@@ -1,0 +1,435 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        180deg,
+        #fff8fb,
+        #f8e2ec
+    );
+
+    color:#725465;
+
+}
+
+
+/* BACKGROUND LOGO */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:url("logo.PNG") center 45% no-repeat;
+
+    background-size:330px;
+
+    opacity:0.035;
+
+    pointer-events:none;
+
+}
+
+
+/* APP */
+
+#app{
+
+    max-width:430px;
+
+    margin:auto;
+
+    padding:15px;
+
+    padding-bottom:100px;
+
+}
+
+
+/* MENU BUTTON */
+
+.topBar{
+
+    display:flex;
+
+    justify-content:flex-start;
+
+}
+
+
+#menuButton{
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:white;
+
+    font-size:28px;
+
+    color:#d45c94;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+
+/* WELCOME AREA */
+
+.welcomeSection{
+
+    text-align:center;
+
+    margin-top:-5px;
+
+    margin-bottom:25px;
+
+}
+
+
+.topLogo{
+
+    width:90px;
+
+    margin:0 auto 8px;
+
+    display:block;
+
+}
+
+
+.welcomeSection h1{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:42px;
+
+    color:#995d7b;
+
+    font-weight:600;
+
+    white-space:nowrap;
+
+}
+
+
+.heartDivider{
+
+    color:#db83aa;
+
+    font-size:32px;
+
+    margin:5px;
+
+}
+
+
+#todayDate{
+
+    color:#987582;
+
+    font-size:17px;
+
+}
+
+
+/* STAT BOXES */
+
+.statsGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:14px;
+
+}
+
+
+.statCard{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:18px 10px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 25px rgba(200,130,160,.15);
+
+}
+
+
+.statIcon{
+
+    font-size:28px;
+
+}
+
+
+.statCard h3{
+
+    font-size:14px;
+
+    color:#866879;
+
+    margin-top:8px;
+
+}
+
+
+.statCard h2{
+
+    color:#d879a4;
+
+    font-size:30px;
+
+    margin-top:5px;
+
+}
+
+
+/* MAIN CARDS */
+
+.dashboardCard{
+
+    background:white;
+
+    border-radius:25px;
+
+    margin-top:18px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 10px 25px rgba(200,130,160,.15);
+
+}
+
+
+.cardHeader{
+
+    padding:18px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#765468;
+
+}
+
+
+.cardContent{
+
+    padding:0 18px 18px;
+
+}
+
+
+.toggleButton{
+
+    border:none;
+
+    background:none;
+
+    font-size:18px;
+
+}
+
+
+/* REVENUE */
+
+.revenueGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:12px;
+
+}
+
+
+.revenueCard{
+
+    background:#fff1f6;
+
+    padding:15px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+}
+
+
+.revenueCard p{
+
+    color:#d879a4;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+}
+
+
+/* BOTTOM BUTTONS */
+
+.bottomNav{
+
+    position:fixed;
+
+    bottom:15px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:88%;
+
+    max-width:380px;
+
+    background:white;
+
+    border-radius:28px;
+
+    padding:12px;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.15);
+
+}
+
+
+.bottomButton{
+
+    text-decoration:none;
+
+    color:#765468;
+
+    font-size:14px;
+
+    text-align:center;
+
+}
+
+
+.addOrder{
+
+    color:#d879a4;
+
+}
+
+
+/* SIDE MENU */
+
+#sideMenu{
+
+    position:fixed;
+
+    left:-270px;
+
+    top:0;
+
+    width:260px;
+
+    height:100%;
+
+    background:white;
+
+    z-index:1000;
+
+    transition:.3s;
+
+}
+
+
+#sideMenu.active{
+
+    left:0;
+
+}
+
+
+.menuHeader{
+
+    text-align:center;
+
+    background:#ffeaf2;
+
+    padding:25px;
+
+}
+
+
+.menuLogo{
+
+    width:90px;
+
+}
+
+
+.menuLinks a{
+
+    display:block;
+
+    padding:18px;
+
+    color:#765468;
+
+    text-decoration:none;
+
+    border-bottom:1px solid #eee;
+
+}
+
+
+/* OVERLAY */
+
+#overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.3);
+
+    display:none;
+
+    z-index:999;
+
+}
+
+
+#overlay.active{
+
+    display:block;
+
+}
