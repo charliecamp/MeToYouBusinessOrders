@@ -289,7 +289,7 @@ function initialiseItems() {
 // -----------------------------
 
 let payments = [];
-
+let editingOrderIndex = null;
 
 
 // -----------------------------
@@ -561,6 +561,113 @@ function setupProgressTracker() {
     updateTracker();
 
 }
+
+// -----------------------------
+// LOAD ORDER
+// -----------------------------
+
+function loadOrder(index) {
+
+    const orders =
+        JSON.parse(localStorage.getItem("orders")) || [];
+
+    const order = orders[index];
+
+    if (!order) {
+
+        return;
+
+    }
+
+    editingOrderIndex = index;
+
+    document.getElementById("customerName").value =
+        order.customerName || "";
+
+    document.getElementById("customerContact").value =
+        order.customerContact || "";
+
+    document.getElementById("orderSource").value =
+        order.orderSource || "Facebook";
+
+    document.getElementById("socialUsername").value =
+        order.socialUsername || "";
+
+    document.getElementById("orderDate").value =
+        order.orderDate || "";
+
+    document.getElementById("dateNeeded").value =
+        order.dateNeeded || "";
+
+    document.getElementById("orderNotes").value =
+        order.orderNotes || "";
+
+    document.getElementById("deliveryMethod").value =
+        order.deliveryMethod || "Collection";
+
+    document.getElementById("trackingNumber").value =
+        order.trackingNumber || "";
+
+    document.getElementById("orderProgress").value =
+        order.orderProgress || "New Order";
+
+    document.getElementById("orderNumber").value =
+        order.orderNumber || "";
+
+payments = order.payments || [];
+
+const itemsContainer =
+    document.getElementById("items");
+
+itemsContainer.innerHTML = "";
+
+(order.items || []).forEach(savedItem => {
+
+    const item =
+        createItemCard();
+
+    item.querySelector(".item-product").value =
+        savedItem.product || "";
+
+    item.querySelector(".item-quantity").value =
+        savedItem.quantity || 1;
+
+    item.querySelector(".item-price").value =
+        savedItem.unitPrice || 0;
+
+    item.querySelector(".item-total").value =
+        savedItem.itemTotal || 0;
+
+    item.querySelector(".item-size").value =
+        savedItem.size || "";
+
+    item.querySelector(".item-colour").value =
+        savedItem.colour || "";
+
+    item.querySelector(".item-personalised").value =
+        savedItem.personalised || "No";
+
+    item.querySelector(".item-personalisation").value =
+        savedItem.personalisation || "";
+
+    if (savedItem.personalised === "Yes") {
+
+        item.querySelector(
+            ".personalisation-section"
+        ).style.display = "block";
+
+    }
+
+    itemsContainer.appendChild(item);
+
+});
+
+updateTotals();
+
+renderPaymentHistory();
+
+}
+
 // -----------------------------
 // SAVE ORDER
 // -----------------------------
@@ -657,17 +764,26 @@ function saveOrder() {
     };
 
     const orders =
-        JSON.parse(localStorage.getItem("orders")) || [];
+    JSON.parse(localStorage.getItem("orders")) || [];
+
+if (editingOrderIndex !== null) {
+
+    orders[editingOrderIndex] = order;
+
+}
+
+else {
 
     orders.push(order);
 
-    localStorage.setItem(
-        "orders",
-        JSON.stringify(orders)
-    );
+}
 
-    alert("✅ Order saved successfully!");
+localStorage.setItem(
+    "orders",
+    JSON.stringify(orders)
+);
 
+alert("✅ Order saved successfully!");
 }
 
 
