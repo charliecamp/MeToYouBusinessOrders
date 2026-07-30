@@ -281,12 +281,10 @@ deliveryMethod.addEventListener(
 document
 .querySelector(".save-order")
 .addEventListener("click", function () {
+const order = {
 
-    const order = {
-
-        orderNumber:
-            orderNumber: "",
-
+    orderNumber: "",
+    
         customerName:
             document.getElementById("customerName").value,
 
