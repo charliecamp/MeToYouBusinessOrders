@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Poppins:wght@300;400;500;600&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+    linear-gradient(
+        180deg,
+        #fff8fb,
+        #f8e3ed
+    );
+
+    color:#735566;
+
+}
+
+
+
+/* HEADER */
+
+.order-header{
+
+    height:130px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    position:relative;
+
+}
+
+
+
+.header-logo{
+
+    width:85px;
+
+    height:auto;
+
+}
+
+
+
+.back-btn{
+
+    position:absolute;
+
+    left:18px;
+
+    top:35px;
+
+    border:none;
+
+    background:white;
+
+    color:#b87595;
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:15px;
+
+    font-size:20px;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.08);
+
+}
+
+
+
+/* PAGE TITLE */
+
+.page-title{
+
+    text-align:center;
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:42px;
+
+    font-weight:600;
+
+    color:#985b78;
+
+    margin-top:5px;
+
+}
+
+
+
+.heart{
+
+    text-align:center;
+
+    color:#d88bad;
+
+    font-size:26px;
+
+    margin:5px 0 25px;
+
+}
+
+
+
+
+
+main{
+
+    padding:0 18px 40px;
+
+}
+
+
+
+
+
+/* CARDS */
+
+.order-card{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:22px;
+
+    margin-bottom:18px;
+
+    box-shadow:
+
+    0 10px 25px rgba(200,130,160,.15);
+
+}
+
+
+
+
+.order-card h2{
+
+    color:#c486a3;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    margin-bottom:18px;
+
+}
+
+
+
+
+
+/* INPUTS */
+
+
+label{
+
+    display:block;
+
+    color:#806273;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    margin:14px 0 7px;
+
+}
+
+
+
+input,
+select,
+textarea{
+
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:18px;
+
+    border:1px solid #edd7e2;
+
+    background:#fffafd;
+
+    font-size:15px;
+
+    color:#735566;
+
+    outline:none;
+
+}
+
+
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    border-color:#d88bad;
+
+}
+
+
+
+textarea{
+
+    height:120px;
+
+}
+
+
+
+
+
+/* ITEMS */
+
+
+.item-box{
+
+    background:#fff5f9;
+
+    border-radius:20px;
+
+    padding:18px;
+
+    margin-bottom:15px;
+
+    border:1px solid #f3d8e5;
+
+}
+
+
+
+.item-box h3{
+
+    color:#b87595;
+
+    font-size:18px;
+
+}
+
+
+
+
+/* BUTTONS */
+
+
+.add-item{
+
+    width:100%;
+
+    border:none;
+
+    background:#f7d5e3;
+
+    color:#b87595;
+
+    padding:14px;
+
+    border-radius:20px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+
+
+.remove-item{
+
+    width:100%;
+
+    margin-top:15px;
+
+    border:none;
+
+    background:#ffe8f0;
+
+    color:#c486a3;
+
+    padding:13px;
+
+    border-radius:18px;
+
+}
+
+
+
+.save-order{
+
+
+    width:100%;
+
+    border:none;
+
+    background:#d88bad;
+
+    color:white;
+
+    padding:17px;
+
+    border-radius:25px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    box-shadow:
+
+    0 10px 25px rgba(200,130,160,.25);
+
+}
+
+
+
+
+
+/* PROGRESS TRACKER */
+
+
+.progress-tracker{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:8px;
+
+}
+
+
+
+.progress-step{
+
+    text-align:center;
+
+    flex:1;
+
+    opacity:.45;
+
+}
+
+
+
+.progress-step.active{
+
+    opacity:1;
+
+}
+
+
+
+.progress-step span{
+
+    font-size:22px;
+
+}
+
+
+
+.progress-step p{
+
+    font-size:11px;
+
+    margin-top:5px;
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:500px){
+
+    .page-title{
+
+        font-size:38px;
+
+    }
+
+}
