@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Add New Order</title>
+
+<link rel="stylesheet" href="add-order.css">
+
+</head>
+
+
+<body>
+
+
+<header class="order-header">
+
+<button onclick="history.back()" class="back-btn">
+← Back
+</button>
+
+
+<img src="logo.PNG" class="logo">
+
+
+</header>
+
+
+
+<main>
+
+
+<h1 class="page-title">
++ Add New Order
+</h1>
+
+
+
+<!-- CUSTOMER DETAILS -->
+
+<section class="card">
+
+<h2>
+👤 Customer Details
+</h2>
+
+
+<label>
+Customer Name
+</label>
+
+<input id="customerName" type="text">
+
+
+
+<label>
+Customer Contact
+</label>
+
+<input id="customerContact" type="text">
+
+
+
+<label>
+Where Ordered From
+</label>
+
+
+<select id="orderedFrom">
+
+<option>Facebook</option>
+<option>Instagram</option>
+<option>TikTok</option>
+<option>Etsy</option>
+<option>Website</option>
+<option>Other</option>
+
+</select>
+
+
+<div id="socialUsernameBox">
+
+<label>
+Social Media Username
+</label>
+
+<input 
+id="socialUsername"
+placeholder="@username">
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ITEMS -->
+
+
+<section class="card">
+
+
+<h2>
+📦 Items Ordered
+</h2>
+
+
+
+<div id="itemsContainer">
+
+
+
+<div class="item-box">
+
+
+<h3>
+📦 Item 1
+</h3>
+
+
+
+<label>
+Product
+</label>
+
+<input type="text">
+
+
+
+<label>
+Quantity
+</label>
+
+<input type="number" value="1">
+
+
+
+<label>
+Price (£)
+</label>
+
+<input type="number" value="0">
+
+
+
+<label>
+Size (Optional)
+</label>
+
+<input type="text">
+
+
+
+<label>
+Colour / Theme
+</label>
+
+<input type="text">
+
+
+
+<label>
+Personalised?
+</label>
+
+
+<select>
+
+<option>No</option>
+<option>Yes</option>
+
+</select>
+
+
+<button class="remove-item">
+❌ Remove Item
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<button id="addItem" class="pink-btn">
++ Add Another Item
+</button>
+
+
+
+</section>
+
+
+
+
+
+<!-- ORDER DETAILS -->
+
+
+<section class="card">
+
+
+<h2>
+📝 Order Details
+</h2>
+
+
+
+<label>
+Order Number
+</label>
+
+<input id="orderNumber" readonly>
+
+
+
+<label>
+Order Date
+</label>
+
+<input type="date" id="orderDate">
+
+
+
+<label>
+Date Needed By
+</label>
+
+<input type="date" id="neededDate">
+
+
+
+<label>
+Customer Request Images
+</label>
+
+<input 
+type="file"
+multiple
+accept="image/*">
+
+
+
+<label>
+Mock Up Images
+</label>
+
+<input 
+type="file"
+multiple
+accept="image/*">
+
+
+
+<label>
+Order Notes
+</label>
+
+
+<textarea 
+placeholder="Anything the customer has requested...">
+</textarea>
+
+
+
+</section>
+<!-- PAYMENT SECTION -->
+
+<section class="card">
+
+
+<h2>
+💷 Payment
+</h2>
+
+
+
+<label>
+Total (£)
+</label>
+
+<input 
+type="number"
+id="totalAmount"
+value="0">
+
+
+
+<label>
+Payment Status
+</label>
+
+
+<select id="paymentStatus">
+
+<option>Not Paid</option>
+<option>Deposit Paid</option>
+<option>Paid In Full</option>
+
+</select>
+
+
+
+
+<label>
+Deposit (£)
+</label>
+
+<input 
+type="number"
+id="depositAmount"
+value="0">
+
+
+
+<label>
+Remaining Balance (£)
+</label>
+
+<input 
+type="number"
+id="remainingBalance"
+value="0"
+readonly>
+
+
+
+<label>
+Payment Method
+</label>
+
+
+<select id="paymentMethod">
+
+<option>Cash</option>
+<option>Bank Transfer</option>
+<option>PayPal</option>
+<option>Card</option>
+
+</select>
+
+
+
+</section>
+
+
+
+
+
+<!-- DELIVERY -->
+
+
+<section class="card">
+
+
+<h2>
+🚚 Delivery
+</h2>
+
+
+
+<label>
+Delivery Method
+</label>
+
+
+<select id="deliveryMethod">
+
+
+<option>Local Collection</option>
+
+<option>Local Delivery</option>
+
+<option>Royal Mail</option>
+
+<option>Evri</option>
+
+<option>InPost</option>
+
+
+</select>
+
+
+
+
+<div id="trackingBox">
+
+
+<label>
+Tracking Number
+</label>
+
+
+<input 
+type="text"
+id="trackingNumber"
+placeholder="Enter tracking number">
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<!-- ORDER STATUS -->
+
+
+<section class="card">
+
+
+<h2>
+📋 Order Status
+</h2>
+
+
+<select id="orderStatus">
+
+
+<option>New Order</option>
+
+<option>In Progress</option>
+
+<option>Waiting For Customer</option>
+
+<option>Ready</option>
+
+<option>Completed</option>
+
+<option>Cancelled</option>
+
+
+</select>
+
+
+</section>
+
+
+
+
+
+
+<!-- PROGRESS TRACKER -->
+
+
+<section class="card">
+
+
+<h2>
+⏱ Order Progress
+</h2>
+
+
+
+<div class="progress-container">
+
+
+<div class="progress-bar" id="progressBar"></div>
+
+
+</div>
+
+
+
+<div class="progress-labels">
+
+
+<span>
+New
+</span>
+
+
+<span>
+Making
+</span>
+
+
+<span>
+Ready
+</span>
+
+
+<span>
+Done
+</span>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+<button class="save-order-btn">
+
+💖 Save Order
+
+</button>
+
+
+
+
+</main>
+
+
+<script src="add-order.js"></script>
+
+
+</body>
+
+</html>
