@@ -494,3 +494,38 @@ addPaymentButton.addEventListener("click", function () {
     }
 
 });
+
+
+document.getElementById("savePayment").addEventListener("click", function () {
+
+    const date = document.getElementById("paymentDate").value;
+    const amount = Number(document.getElementById("paymentAmount").value) || 0;
+    const method = document.getElementById("paymentMethodEntry").value;
+    const notes = document.getElementById("paymentNotes").value;
+
+    const history = document.getElementById("paymentHistory");
+
+    if (history.innerHTML.includes("No payments")) {
+        history.innerHTML = "";
+    }
+
+    history.innerHTML += `
+        <p>
+            <strong>${date}</strong><br>
+            £${amount.toFixed(2)} - ${method}<br>
+            ${notes}
+        </p>
+        <hr>
+    `;
+
+    const deposit = document.getElementById("depositAmount");
+    deposit.value = (Number(deposit.value) + amount).toFixed(2);
+
+    updateTotals();
+
+    paymentForm.style.display = "none";
+
+    document.getElementById("paymentDate").value = "";
+    document.getElementById("paymentAmount").value = "";
+    document.getElementById("paymentNotes").value = "";
+});
