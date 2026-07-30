@@ -331,3 +331,27 @@ document.addEventListener("input", function (e) {
 });
 
 updateTotals();
+
+// ===============================
+// PERSONALISATION BOX
+// ===============================
+
+const personalisedSelect = document.getElementById("personalised");
+const personalisationBox = document.getElementById("personalisationBox");
+
+if (personalisedSelect && personalisationBox) {
+
+    function togglePersonalisation() {
+
+        if (personalisedSelect.value === "Yes") {
+            personalisationBox.style.display = "block";
+        } else {
+            personalisationBox.style.display = "none";
+        }
+
+    }
+
+    personalisedSelect.addEventListener("change", togglePersonalisation);
+
+    togglePersonalisation();
+}
