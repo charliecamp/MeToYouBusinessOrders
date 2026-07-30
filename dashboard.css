@@ -1,0 +1,422 @@
+/* =================================
+   ME TO YOU DESIGNS DASHBOARD
+================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        180deg,
+        #fff8fb,
+        #f9e1eb
+    );
+
+    color:#6d5260;
+
+    overflow-x:hidden;
+
+}
+
+
+/* LOGO WATERMARK */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:url("logo.PNG") center no-repeat;
+
+    background-size:350px;
+
+    opacity:0.04;
+
+    pointer-events:none;
+
+}
+
+
+/* MAIN APP */
+
+#app{
+
+    max-width:430px;
+
+    margin:auto;
+
+    padding:20px;
+
+    padding-bottom:120px;
+
+}
+
+
+/* TOP MENU */
+
+.topBar{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+}
+
+
+#menuButton{
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:white;
+
+    font-size:25px;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.08);
+
+}
+
+
+/* WELCOME */
+
+.welcomeSection{
+
+    margin-top:25px;
+
+    margin-bottom:25px;
+
+}
+
+
+.welcomeSection h1{
+
+    font-size:28px;
+
+    color:#765463;
+
+}
+
+
+#todayDate{
+
+    margin-top:8px;
+
+    color:#a18490;
+
+}
+
+
+/* FOUR SMALL BOXES */
+
+.statsGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+    margin-bottom:25px;
+
+}
+
+
+.statCard{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:18px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 25px rgba(200,150,170,.18);
+
+}
+
+
+.statIcon{
+
+    font-size:25px;
+
+}
+
+
+.statCard h3{
+
+    font-size:13px;
+
+    margin-top:8px;
+
+    color:#927582;
+
+}
+
+
+.statCard h2{
+
+    margin-top:8px;
+
+    font-size:28px;
+
+    color:#d88ba9;
+
+}
+
+
+/* DROPDOWN CARDS */
+
+.dashboardCard{
+
+    background:white;
+
+    border-radius:25px;
+
+    margin-bottom:18px;
+
+    box-shadow:
+    0 10px 25px rgba(200,150,170,.15);
+
+    overflow:hidden;
+
+}
+
+
+.cardHeader{
+
+    padding:18px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    display:flex;
+
+    justify-content:space-between;
+
+}
+
+
+.cardContent{
+
+    padding:0 18px 18px;
+
+}
+
+
+/* BUTTONS */
+
+.addButton{
+
+    width:100%;
+
+    border:none;
+
+    padding:13px;
+
+    border-radius:18px;
+
+    background:#df9bb5;
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+
+/* REVENUE BOXES */
+
+.revenueGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:12px;
+
+}
+
+
+.revenueCard{
+
+    background:#fff3f7;
+
+    padding:15px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+}
+
+
+.revenueCard p{
+
+    color:#d88ba9;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+}
+
+
+/* BOTTOM BUTTONS */
+
+.bottomNav{
+
+    position:fixed;
+
+    bottom:20px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:90%;
+
+    max-width:400px;
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:14px;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.15);
+
+}
+
+
+.bottomButton{
+
+    text-decoration:none;
+
+    color:#765463;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    font-size:14px;
+
+}
+
+
+/* SIDE MENU */
+
+#sideMenu{
+
+    position:fixed;
+
+    top:0;
+
+    left:-280px;
+
+    width:270px;
+
+    height:100%;
+
+    background:white;
+
+    z-index:1000;
+
+    transition:.3s;
+
+    box-shadow:
+    5px 0 25px rgba(0,0,0,.15);
+
+}
+
+
+#sideMenu.active{
+
+    left:0;
+
+}
+
+
+.menuHeader{
+
+    text-align:center;
+
+    padding:30px;
+
+    background:#fff0f5;
+
+}
+
+
+.menuLogo{
+
+    width:100px;
+
+}
+
+
+.menuLinks a{
+
+    display:block;
+
+    padding:18px;
+
+    text-decoration:none;
+
+    color:#765463;
+
+    border-bottom:1px solid #eee;
+
+}
+
+
+/* OVERLAY */
+
+#overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.35);
+
+    display:none;
+
+    z-index:999;
+
+}
+
+
+#overlay.active{
+
+    display:block;
+
+}
