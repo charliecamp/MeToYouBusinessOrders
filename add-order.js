@@ -240,17 +240,18 @@ document.querySelector("#remainingBalance")?.value,
 
 delivery:
 document.querySelector("#deliveryMethod")?.value,
-delivery:
-document.querySelector("#deliveryMethod")?.value,
 
+items:
+Array.from(document.querySelectorAll(".item-box")).map(item => ({
+    product: item.querySelector("#product")?.value,
+    quantity: item.querySelector("#quantity")?.value,
+    price: item.querySelector("#price")?.value,
+    size: item.querySelector("#size")?.value,
+    colour: item.querySelector("#colour")?.value
+})),
 
 paymentMethod:
 document.querySelector("#paymentMethod")?.value,
-
-
-tracking:
-document.querySelector("#trackingNumber")?.value,
-
 
 tracking:
 document.querySelector("#trackingNumber")?.value,
