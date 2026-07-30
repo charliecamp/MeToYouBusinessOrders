@@ -240,6 +240,16 @@ document.querySelector("#remainingBalance")?.value,
 
 delivery:
 document.querySelector("#deliveryMethod")?.value,
+delivery:
+document.querySelector("#deliveryMethod")?.value,
+
+
+paymentMethod:
+document.querySelector("#paymentMethod")?.value,
+
+
+tracking:
+document.querySelector("#trackingNumber")?.value,
 
 
 tracking:
