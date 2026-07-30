@@ -482,3 +482,15 @@ function updateProgressTracker() {
 progressSelect.addEventListener("change", updateProgressTracker);
 
 updateProgressTracker();
+const addPaymentButton = document.getElementById("addPaymentButton");
+const paymentForm = document.getElementById("paymentForm");
+
+addPaymentButton.addEventListener("click", function () {
+
+    if (paymentForm.style.display === "none") {
+        paymentForm.style.display = "block";
+    } else {
+        paymentForm.style.display = "none";
+    }
+
+});
