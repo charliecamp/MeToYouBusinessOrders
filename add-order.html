@@ -335,30 +335,38 @@ placeholder="Enter tracking number">
 <section class="order-card">
 
 <h2>✨ Order Progress</h2>
+<label>Order Progress</label>
 
+<select id="orderProgress">
+    <option>New Order</option>
+    <option>Designing</option>
+    <option>Making</option>
+    <option>Ready</option>
+    <option>Completed</option>
+</select>
 <div class="progress-tracker">
 
-<div class="progress-step active">
+<div id="step-new" class="progress-step active">
 <span>📝</span>
 <p>New Order</p>
 </div>
 
-<div class="progress-step">
+<div id="step-designing" class="progress-step">
 <span>🎨</span>
 <p>Designing</p>
 </div>
 
-<div class="progress-step">
+<div id="step-making" class="progress-step">
 <span>🛠️</span>
 <p>Making</p>
 </div>
 
-<div class="progress-step">
+<div id="step-ready" class="progress-step">
 <span>📦</span>
 <p>Ready</p>
 </div>
 
-<div class="progress-step">
+<div id="step-completed" class="progress-step">
 <span>✅</span>
 <p>Completed</p>
 </div>
