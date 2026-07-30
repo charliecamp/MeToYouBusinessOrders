@@ -420,3 +420,53 @@ body::before{
     display:block;
 
 }
+/* TOP LOGO */
+
+.topLogo{
+
+    width:110px;
+
+    display:block;
+
+    margin:10px auto 20px;
+
+}
+
+
+/* Cursive Welcome */
+
+.welcomeSection h1{
+
+    font-family:'Dancing Script', cursive;
+
+    font-size:42px;
+
+    text-align:center;
+
+    color:#9b607b;
+
+    font-weight:600;
+
+}
+
+
+/* Heart */
+
+.heartDivider{
+
+    text-align:center;
+
+    font-size:28px;
+
+    color:#d88ba9;
+
+    margin:8px 0;
+
+}
+
+
+.welcomeSection{
+
+    text-align:center;
+
+}
