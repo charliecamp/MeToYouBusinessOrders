@@ -341,7 +341,7 @@ const personalisationBox = document.getElementById("personalisationBox");
 
 if (personalisedSelect && personalisationBox) {
 
-    function togglePersonalisation() {
+window.togglePersonalisation = function () {
 
         if (personalisedSelect.value === "Yes") {
             personalisationBox.style.display = "block";
