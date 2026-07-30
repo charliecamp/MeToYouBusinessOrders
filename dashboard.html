@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Me To You Designs</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+    <!-- Overlay -->
+
+    <div id="overlay"></div>
+
+    <!-- Side Menu -->
+
+    <nav id="sideMenu">
+
+        <div class="menu-top">
+
+            <img src="logo.PNG"
+                 alt="Me To You Designs Logo"
+                 class="menu-logo">
+
+        </div>
+
+        <div class="menu-links">
+
+            <a href="dashboard.html">🏠 Dashboard</a>
+
+            <a href="orders.html">📦 Orders</a>
+
+            <a href="customers.html">👥 Customers</a>
+
+            <a href="calendar.html">📅 Calendar</a>
+
+            <a href="invoices.html">💷 Invoices</a>
+
+            <a href="customer-media.html">🖼 Customer Media</a>
+
+            <a href="revenue.html">📈 Revenue</a>
+
+            <a href="settings.html">⚙️ Settings</a>
+
+        </div>
+
+        <div class="menu-bottom">
+
+            <a href="index.html" class="logout">
+
+                🚪 Log Out
+
+            </a>
+
+        </div>
+
+    </nav>
+
+    <!-- Main App -->
+
+    <div id="app">
+
+        <header class="top-bar">
+
+            <button id="menuButton">
+
+                ☰
+
+            </button>
+
+            <img src="logo.PNG"
+                 alt="Me To You Designs"
+                 class="header-logo">
+
+        </header>
+
+        <main class="dashboard">
+        <!-- Welcome -->
+
+        <section class="welcome-card">
+
+            <h1>Business Dashboard</h1>
+
+            <p id="todayDate"></p>
+
+        </section>
+
+        <!-- Quick Stats -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <h3>Today's Orders</h3>
+                <span id="todayOrders">0</span>
+            </div>
+
+            <div class="stat-card">
+                <h3>Outstanding</h3>
+                <span id="outstandingPayments">£0.00</span>
+            </div>
+
+            <div class="stat-card">
+                <h3>Orders Due</h3>
+                <span id="ordersDue">0</span>
+            </div>
+
+            <div class="stat-card">
+                <h3>This Month</h3>
+                <span id="monthlyRevenue">£0.00</span>
+            </div>
+
+        </section>
+
+        <!-- Next Order -->
+
+        <section class="dashboard-card">
+
+            <h2>📦 Next Order</h2>
+
+            <div id="nextOrder">
+
+                <p>No upcoming orders.</p>
+
+            </div>
+
+        </section>
+
+        <!-- Today's Jobs -->
+
+        <section class="dashboard-card">
+
+            <h2>📅 Today's Jobs</h2>
+
+            <div id="todaysJobs">
+
+                <p>No jobs scheduled.</p>
+
+            </div>
+
+        </section>
+
+        <!-- Outstanding Payments -->
+
+        <section class="dashboard-card">
+
+            <h2>💷 Outstanding Payments</h2>
+
+            <div id="paymentList">
+
+                <p>No outstanding payments.</p>
+
+            </div>
+
+        </section>
+
+        <!-- Quick Actions -->
+
+        <section class="quick-actions">
+
+            <button id="addOrderBtn">
+                ➕ Add Order
+            </button>
+
+            <button id="ordersBtn">
+                📦 Orders
+            </button>
+
+            <button id="customersBtn">
+                👥 Customers
+            </button>
+
+        </section>
+        </main>
+
+    </div>
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
