@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Me To You Designs</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<div id="overlay"></div>
+
+
+<!-- SIDE MENU -->
+
+<nav id="sideMenu">
+
+<div class="menuHeader">
+
+<img src="logo.PNG" class="menuLogo">
+
+<h2>Me To You Designs</h2>
+
+</div>
+
+
+<div class="menuLinks">
+
+<a href="dashboard.html">🏠 Dashboard</a>
+
+<a href="orders.html">📦 Orders</a>
+
+<a href="customers.html">👥 Customers</a>
+
+<a href="calendar.html">📅 Calendar</a>
+
+<a href="invoices.html">💷 Invoices</a>
+
+<a href="customer-media.html">🖼 Customer Media</a>
+
+<a href="revenue.html">📈 Revenue</a>
+
+<a href="settings.html">⚙️ Settings</a>
+
+</div>
+
+
+</nav>
+
+
+
+<div id="app">
+
+
+<header class="topBar">
+
+<button id="menuButton">
+☰
+</button>
+
+</header>
+
+
+
+<section class="welcomeSection">
+
+
+<img src="logo.PNG" class="topLogo">
+
+
+<h1 id="welcomeMessage">
+Welcome Back Charlie
+</h1>
+
+
+<div class="heartDivider">
+♡
+</div>
+
+
+<p id="todayDate"></p>
+
+
+</section>
+
+
+
+
+
+<!-- TOP COUNTERS -->
+
+
+<section class="statsGrid">
+
+
+<div class="statCard">
+
+<div class="statIcon">
+📦
+</div>
+
+<h3>Total Orders</h3>
+
+<h2 id="totalOrders">
+0
+</h2>
+
+</div>
+
+
+
+<div class="statCard">
+
+<div class="statIcon">
+⏳
+</div>
+
+<h3>Pending</h3>
+
+<h2 id="pendingOrders">
+0
+</h2>
+
+</div>
+
+
+
+
+<div class="statCard">
+
+<div class="statIcon">
+📅
+</div>
+
+<h3>Due This Week</h3>
+
+<h2 id="dueWeek">
+0
+</h2>
+
+</div>
+
+
+
+
+<div class="statCard">
+
+<div class="statIcon">
+📆
+</div>
+
+<h3>Due This Month</h3>
+
+<h2 id="dueMonth">
+0
+</h2>
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- NEXT ORDER -->
+
+
+<section class="dashboardCard">
+
+
+<div class="cardHeader">
+
+⭐ Next Order
+
+</div>
+
+
+<div class="cardContent">
+
+
+<p>
+No upcoming orders.
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- TODAY JOBS -->
+
+
+<section class="dashboardCard">
+
+
+<div class="cardHeader">
+
+📋 Today's Jobs
+
+<button class="toggleButton">
+▼
+</button>
+
+</div>
+
+
+<div class="cardContent">
+
+
+<button class="addButton" id="addJobButton">
++ Add Job
+</button>
+
+
+<ul id="jobsList"></ul>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- PAYMENTS -->
+
+
+<section class="dashboardCard">
+
+
+<div class="cardHeader">
+
+💷 Outstanding Payments
+
+<button class="toggleButton">
+▼
+</button>
+
+</div>
+
+
+<div class="cardContent">
+
+
+<p>
+No outstanding payments.
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- REVENUE -->
+
+
+<section class="dashboardCard">
+
+
+<div class="cardHeader">
+
+📈 Revenue
+
+<button class="toggleButton">
+▼
+</button>
+
+</div>
+
+
+<div class="cardContent">
+
+
+<div class="revenueGrid">
+
+
+<div class="revenueCard">
+
+<h4>Today</h4>
+
+<p>£0.00</p>
+
+</div>
+
+
+<div class="revenueCard">
+
+<h4>This Week</h4>
+
+<p>£0.00</p>
+
+</div>
+
+
+<div class="revenueCard">
+
+<h4>This Month</h4>
+
+<p>£0.00</p>
+
+</div>
+
+
+<div class="revenueCard">
+
+<h4>Total</h4>
+
+<p>£0.00</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- NOTES -->
+
+
+<section class="dashboardCard">
+
+
+<div class="cardHeader">
+
+📝 Daily Notes
+
+<button class="toggleButton">
+▼
+</button>
+
+</div>
+
+
+<div class="cardContent">
+
+
+<button class="addButton" id="addNoteButton">
++ Add Note
+</button>
+
+
+<ul id="notesList"></ul>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- FIXED BUTTONS -->
+
+
+<footer class="bottomNav">
+
+
+<a href="customers.html" class="bottomButton">
+
+👥
+
+<span>
+Customers
+</span>
+
+</a>
+
+
+
+<a href="orders.html" class="bottomButton addOrder">
+
+＋
+
+<span>
+Add Order
+</span>
+
+</a>
+
+
+</footer>
+
+
+
+</div>
+
+
+
+<script src="dashboard.js"></script>
+
+
+</body>
+
+</html>
