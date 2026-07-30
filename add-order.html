@@ -152,12 +152,21 @@ Colour / Theme
 Personalised?
 </label>
 
-<select>
-
-<option>No</option>
-<option>Yes</option>
-
+<select id="personalised">
+    <option value="No">No</option>
+    <option value="Yes">Yes</option>
 </select>
+
+<div id="personalisationBox" style="display:none; margin-top:15px;">
+
+    <label>Personalisation Details</label>
+
+    <textarea
+        id="personalisationDetails"
+        placeholder="Enter the name, message or personalisation required..."
+    ></textarea>
+
+</div>
 
 
 <button class="remove-item">
@@ -254,13 +263,12 @@ Order Notes
 <label>
 Total (£)
 </label>
-
-<input 
-type="number"
-id="orderTotal"
-value="0">
-
-
+  
+<input
+    type="number"
+    id="orderTotal"
+    value="0"
+    readonly>
 
 <label>
 Payment Status
