@@ -322,26 +322,10 @@ Payment Method
 
 
 
-<!-- DELIVERY SECTION -->
-
-
-<section class="order-card">
-
-
-<h2>
-🚚 Delivery
-</h2>
-
-
-
-<label>
-Delivery Method
-</label>
-
-
 <select id="deliveryMethod">
 
-<option>Local Collection</option>
+<option>Collection</option>
+<option>Local Delivery</option>
 <option>Royal Mail</option>
 <option>Evri</option>
 <option>InPost</option>
@@ -349,15 +333,18 @@ Delivery Method
 </select>
 
 
+<div id="trackingBox" style="display:none;">
 
 <label>
 Tracking Number
 </label>
 
-<input 
+<input
 type="text"
+id="trackingNumber"
 placeholder="Enter tracking number">
 
+</div>
 
 
 </section>
