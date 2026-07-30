@@ -819,10 +819,6 @@ function setupSavePaymentButton() {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    createOrderNumber();
-
-    setTodayDate();
-
     initialiseItems();
 
     setupPaymentButton();
@@ -835,6 +831,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setupSaveButton();
 
-    renderPaymentHistory();
+    const editIndex =
+        localStorage.getItem("editingOrderIndex");
+
+    if (editIndex !== null) {
+
+        loadOrder(Number(editIndex));
+
+        localStorage.removeItem("editingOrderIndex");
+
+    }
+
+    else {
+
+        createOrderNumber();
+
+        setTodayDate();
+
+        renderPaymentHistory();
+
+    }
 
 });
