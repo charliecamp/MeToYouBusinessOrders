@@ -62,7 +62,13 @@ function updateTotals() {
     const deposit =
         Number(document.getElementById("depositAmount").value) || 0;
 
-    let balance = total - deposit;
+    let balance;
+
+if (document.getElementById("paymentStatus").value === "Paid In Full") {
+    balance = 0;
+} else {
+    balance = total - deposit;
+}
 
     if (balance < 0) {
 
@@ -424,12 +430,18 @@ paymentStatus.addEventListener("change", function () {
     const total = Number(document.getElementById("orderTotal").value) || 0;
     const deposit = document.getElementById("depositAmount");
 
-    if (this.value === "Not Paid") {
-        deposit.value = 0;
-    }
+    switch (this.value) {
 
-    if (this.value === "Paid In Full") {
-        deposit.value = total.toFixed(2);
+        case "Not Paid":
+            deposit.value = 0;
+            break;
+
+        case "Deposit Paid":
+            break;
+
+        case "Paid In Full":
+            deposit.value = total;
+            break;
     }
 
     updateTotals();
