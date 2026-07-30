@@ -212,3 +212,93 @@ if (deliveryMethod && trackingBox) {
     });
 
 }
+// ==========================
+// SAVE ORDER SYSTEM
+// ==========================
+
+
+const saveOrderButton = document.querySelector(".save-order");
+
+
+if(saveOrderButton){
+
+
+saveOrderButton.addEventListener("click", function(){
+
+
+const order = {
+
+
+orderNumber:
+document.getElementById("orderNumber")?.value,
+
+
+customerName:
+document.querySelector("#customerName")?.value,
+
+
+customerContact:
+document.querySelector("#customerContact")?.value,
+
+
+orderedFrom:
+document.querySelector("#orderedFrom")?.value,
+
+
+socialUsername:
+document.querySelector("#socialUsername")?.value,
+
+
+orderNotes:
+document.querySelector("#orderNotes")?.value,
+
+
+total:
+document.querySelector("#orderTotal")?.value,
+
+
+deposit:
+document.querySelector("#depositAmount")?.value,
+
+
+balance:
+document.querySelector("#remainingBalance")?.value,
+
+
+delivery:
+document.querySelector("#deliveryMethod")?.value,
+
+
+tracking:
+document.querySelector("#trackingNumber")?.value,
+
+
+status:
+"New Order",
+
+
+created:
+new Date().toLocaleDateString()
+
+
+};
+
+
+
+// Save order
+
+localStorage.setItem(
+"latestOrder",
+JSON.stringify(order)
+);
+
+
+
+alert("✨ Order Saved Successfully!");
+
+
+
+});
+
+
+}
