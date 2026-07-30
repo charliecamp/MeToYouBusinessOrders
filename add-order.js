@@ -183,3 +183,32 @@ trackingBox.style.display = "none";
 
 
 }
+// ==========================
+// DELIVERY TRACKING POPUP
+// ==========================
+
+const deliveryMethod = document.getElementById("deliveryMethod");
+const trackingBox = document.getElementById("trackingBox");
+
+
+if (deliveryMethod && trackingBox) {
+
+    deliveryMethod.addEventListener("change", function () {
+
+        if (
+            this.value === "Royal Mail" ||
+            this.value === "Evri" ||
+            this.value === "InPost"
+        ) {
+
+            trackingBox.style.display = "block";
+
+        } else {
+
+            trackingBox.style.display = "none";
+
+        }
+
+    });
+
+}
