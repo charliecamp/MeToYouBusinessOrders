@@ -416,3 +416,38 @@ document
 document
 .getElementById("depositAmount")
 .addEventListener("input", updateTotals);
+
+const progressSelect = document.getElementById("orderProgress");
+
+const progressSteps = [
+    "step-new",
+    "step-designing",
+    "step-making",
+    "step-ready",
+    "step-completed"
+];
+
+function updateProgressTracker() {
+
+    progressSteps.forEach(id => {
+        document.getElementById(id).classList.remove("active");
+    });
+
+    const stages = {
+        "New Order": 1,
+        "Designing": 2,
+        "Making": 3,
+        "Ready": 4,
+        "Completed": 5
+    };
+
+    const currentStage = stages[progressSelect.value] || 1;
+
+    for (let i = 0; i < currentStage; i++) {
+        document.getElementById(progressSteps[i]).classList.add("active");
+    }
+}
+
+progressSelect.addEventListener("change", updateProgressTracker);
+
+updateProgressTracker();
