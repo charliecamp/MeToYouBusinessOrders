@@ -419,34 +419,6 @@ document
 
 });
 
-document
-.getElementById("depositAmount")
-.addEventListener("input", updateTotals);
-
-const paymentStatus = document.getElementById("paymentStatus");
-
-paymentStatus.addEventListener("change", function () {
-
-    const total = Number(document.getElementById("orderTotal").value) || 0;
-    const deposit = document.getElementById("depositAmount");
-
-    switch (this.value) {
-
-        case "Not Paid":
-            deposit.value = 0;
-            break;
-
-        case "Deposit Paid":
-            break;
-
-        case "Paid In Full":
-            deposit.value = total;
-            break;
-    }
-
-    updateTotals();
-
-});
 
 const progressSelect = document.getElementById("orderProgress");
 
