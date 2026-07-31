@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>View Order</title>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet" href="dashboard.css">
+<link rel="stylesheet" href="view-order.css">
+
+</head>
+
+<body>
+
+<div class="page">
+
+<header class="topBar">
+
+<button
+class="menuButton"
+onclick="toggleMenu()">
+
+☰
+
+</button>
+
+<img
+src="logo.png"
+class="logo"
+alt="Me To You Designs">
+
+</header>
+
+<nav id="sideMenu"></nav>
+
+<h1 class="pageTitle">
+
+View Order
+
+</h1>
+
+<div id="orderContainer">
+
+<!-- Order loads here -->
+
+</div>
+
+<div class="buttonRow">
+
+<button
+id="editOrderButton"
+class="addButton">
+
+✏️ Edit Order
+
+</button>
+
+<button
+class="addButton"
+onclick="window.location.href='orders.html'">
+
+⬅ Back to Orders
+
+</button>
+
+</div>
+
+</div>
+
+<script src="menu.js"></script>
+<script src="view-order.js"></script>
+
+</body>
+
+</html>
+
