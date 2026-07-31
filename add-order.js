@@ -718,8 +718,10 @@ if (editingOrderIndex === null) {
     const order = {
 
         orderNumber:
-            document.getElementById("orderNumber").value,
-
+    editingOrderIndex !== null
+        ? document.getElementById("orderNumber").value
+        : createOrderNumber(),
+        
         customerName:
             document.getElementById("customerName").value,
 
