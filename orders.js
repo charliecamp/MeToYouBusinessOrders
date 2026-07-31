@@ -79,9 +79,9 @@ No orders yet.
 
 <p><strong>${order.customerName || ""}</strong></p>
 
-<p>📅 ${order.dueDate || "-"}</p>
+<p>📅 ${order.dateNeeded || "-"}</p>
 
-<p>🛠 ${order.status || "New Order"}</p>
+<p>🛠 ${order.orderProgress || "New Order"}</p>
 
 <p>💷 Remaining £${remaining.toFixed(2)}</p>
 
