@@ -145,8 +145,7 @@ function viewOrder(index){
     );
 
     window.location.href =
-        "add-order.html?view=true";
-
+    "view-order.html";
 }
 
 function deleteOrder(index){
