@@ -709,7 +709,12 @@ function saveOrder() {
             });
 
         });
+if (editingOrderIndex === null) {
 
+    createOrderNumber();
+
+} 
+    
     const order = {
 
         orderNumber:
@@ -844,7 +849,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     else {
 
-        createOrderNumber();
 
         setTodayDate();
 
