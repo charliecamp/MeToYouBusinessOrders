@@ -281,3 +281,137 @@ body{
     font-size:16px;
 
 }
+/* =================================
+   ORDERS PAGE
+================================= */
+
+#searchOrders,
+#statusFilter,
+#sortOrders{
+
+    width:100%;
+
+    padding:14px;
+
+    margin-bottom:12px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#fff6f9;
+
+    font-size:15px;
+
+    font-family:'Poppins',sans-serif;
+
+    color:#735566;
+
+}
+
+#searchOrders:focus,
+#statusFilter:focus,
+#sortOrders:focus{
+
+    outline:none;
+
+}
+
+.orderCard{
+
+    background:white;
+
+    border-radius:22px;
+
+    margin-bottom:15px;
+
+    box-shadow:
+    0 8px 20px rgba(210,150,175,.15);
+
+    overflow:hidden;
+
+}
+
+.orderHeader{
+
+    padding:16px;
+
+    background:#fff3f8;
+
+    color:#985b78;
+
+    font-weight:600;
+
+    font-size:18px;
+
+}
+
+.orderContent{
+
+    padding:18px;
+
+}
+
+.orderContent p{
+
+    margin-bottom:10px;
+
+    color:#735566;
+
+}
+
+.statusBadge{
+
+    display:inline-block;
+
+    background:#ffe8f2;
+
+    color:#c96b92;
+
+    padding:8px 14px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    margin-top:8px;
+
+}
+
+.remainingBadge{
+
+    display:inline-block;
+
+    background:#edf9ef;
+
+    color:#4b8a60;
+
+    padding:8px 14px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    margin-top:8px;
+
+}
+
+.orderButtons{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:18px;
+
+}
+
+.orderButtons button{
+
+    flex:1;
+
+}
