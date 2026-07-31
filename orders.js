@@ -67,15 +67,15 @@ No orders yet.
 
         ordersContainer.innerHTML += `
 
-<section class="dashboardCard">
+<div class="orderCard">
 
-<div class="cardHeader">
+<div class="orderHeader">
 
 📦 ${order.orderNumber || "Order"}
 
 </div>
 
-<div class="cardContent">
+<div class="orderContent">
 
 <p><strong>${order.customerName || ""}</strong></p>
 
@@ -87,17 +87,29 @@ No orders yet.
 
 <br>
 
+<div class="orderButtons">
+
 <button
 class="addButton"
 onclick="editOrder(${index})">
 
-✏️ Edit Order
+✏️ Edit
+
+</button>
+
+<button
+class="addButton"
+onclick="deleteOrder(${index})">
+
+🗑 Delete
 
 </button>
 
 </div>
 
-</section>
+</div>
+
+</div>
 
 `;
 
@@ -114,5 +126,32 @@ function editOrder(index){
 
     window.location.href =
         "add-order.html";
+
+}
+
+function editOrder(index){
+
+    localStorage.setItem(
+        "editingOrderIndex",
+        index
+    );
+
+    window.location.href =
+        "add-order.html";
+
+}
+
+function deleteOrder(index){
+
+    if(!confirm("Delete this order?")) return;
+
+    orders.splice(index,1);
+
+    localStorage.setItem(
+        "orders",
+        JSON.stringify(orders)
+    );
+
+    displayOrders();
 
 }
