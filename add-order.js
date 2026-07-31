@@ -21,9 +21,13 @@ function createOrderNumber() {
         lastOrderNumber
     );
 
-    document.getElementById("orderNumber").value =
-        "MTYD-" +
-        String(lastOrderNumber).padStart(4, "0");
+    const orderNumber =
+    "MTYD-" +
+    String(lastOrderNumber).padStart(4, "0");
+
+document.getElementById("orderNumber").value = orderNumber;
+
+return orderNumber;
 
 }
 
