@@ -843,23 +843,46 @@ document.addEventListener("DOMContentLoaded", function () {
     setupSaveButton();
 
     const editIndex =
-        localStorage.getItem("editingOrderIndex");
+    localStorage.getItem("editingOrderIndex");
+    
+    const viewIndex =
+    localStorage.getItem("viewingOrderIndex");
 
-    if (editIndex !== null) {
+if (editIndex !== null) {
+    
 
-        loadOrder(Number(editIndex));
+    loadOrder(Number(editIndex));
 
-        localStorage.removeItem("editingOrderIndex");
+    localStorage.removeItem("editingOrderIndex");
 
-    }
+}
 
-    else {
+else if (viewIndex !== null) {
 
+    loadOrder(Number(viewIndex));
 
-        setTodayDate();
+    localStorage.removeItem("viewingOrderIndex");
 
-        renderPaymentHistory();
+    document
+        .querySelectorAll("input, textarea, select, button")
+        .forEach(element => {
 
-    }
+            if (!element.classList.contains("menuButton")) {
+
+                element.disabled = true;
+
+            }
+
+        });
+
+}
+
+else {
+
+    setTodayDate();
+
+    renderPaymentHistory();
+
+}
 
 });
