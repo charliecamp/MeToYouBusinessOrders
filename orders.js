@@ -91,6 +91,14 @@ No orders yet.
 
 <button
 class="addButton"
+onclick="viewOrder(${index})">
+
+👁️ View
+
+</button>
+
+<button
+class="addButton"
 onclick="editOrder(${index})">
 
 ✏️ Edit
@@ -101,7 +109,7 @@ onclick="editOrder(${index})">
 class="addButton"
 onclick="deleteOrder(${index})">
 
-🗑 Delete
+🗑️ Delete
 
 </button>
 
@@ -129,15 +137,15 @@ function editOrder(index){
 
 }
 
-function editOrder(index){
+function viewOrder(index){
 
     localStorage.setItem(
-        "editingOrderIndex",
+        "viewingOrderIndex",
         index
     );
 
     window.location.href =
-        "add-order.html";
+        "add-order.html?view=true";
 
 }
 
