@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>View Order | Me To You Designs</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="view-order.css">
+
+</head>
+
+<body>
+
+<div class="pageWrapper">
+
+    <!-- ========================= -->
+    <!-- HEADER -->
+    <!-- ========================= -->
+
+    <header class="topBar">
+
+        <button
+            class="menuButton"
+            onclick="toggleMenu()">
+
+            ☰
+
+        </button>
+
+        <img
+            src="logo.png"
+            alt="Me To You Designs"
+            class="logo">
+
+    </header>
+
+    <!-- ========================= -->
+    <!-- SIDE MENU -->
+    <!-- ========================= -->
+
+    <nav id="sideMenu"></nav>
+
+    <!-- ========================= -->
+    <!-- PAGE TITLE -->
+    <!-- ========================= -->
+
+    <h1 class="pageTitle">
+
+        View Order
+
+    </h1>
+
+    <!-- ========================= -->
+    <!-- ORDER HEADER -->
+    <!-- ========================= -->
+
+    <div class="headerCard">
+
+        <h2 id="orderNumber">
+
+            Loading...
+
+        </h2>
+
+        <p id="customerNameHeader"></p>
+
+        <div class="headerBadges">
+
+            <span id="dueDateBadge"></span>
+
+            <span id="statusBadge"></span>
+
+        </div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- CUSTOMER -->
+    <!-- ========================= -->
+
+    <div class="card">
+
+        <h3>👤 Customer Details</h3>
+
+        <div id="customerDetails"></div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- ITEMS -->
+    <!-- ========================= -->
+
+    <div class="card">
+
+        <h3>🛍️ Items Ordered</h3>
+
+        <div id="itemsOrdered"></div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- PAYMENT -->
+    <!-- ========================= -->
+
+    <div class="card">
+
+        <h3>💳 Payment Summary</h3>
+
+        <div id="paymentSummary"></div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- PAYMENT HISTORY -->
+    <!-- ========================= -->
+
+    <div class="card">
+
+        <h3>💰 Payment History</h3>
+
+        <div id="paymentHistory"></div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- DELIVERY -->
+    <!-- ========================= -->
+
+    <div class="card">
+
+        <h3>🚚 Delivery</h3>
+
+        <div id="deliveryDetails"></div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- NOTES -->
+    <!-- ========================= -->
+
+    <div class="card">
+
+        <h3>📝 Notes</h3>
+
+        <div id="orderNotes"></div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- BUTTONS -->
+    <!-- ========================= -->
+
+    <div class="buttonRow">
+
+        <button
+            id="editOrderButton"
+            class="primaryButton">
+
+            ✏️ Edit Order
+
+        </button>
+
+        <button
+            class="secondaryButton"
+            onclick="window.location.href='orders.html'">
+
+            ← Back to Orders
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="menu.js"></script>
+<script src="view-order.js"></script>
+
+</body>
+
+</html>
