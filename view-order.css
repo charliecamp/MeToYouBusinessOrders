@@ -1,0 +1,344 @@
+/* ======================================
+   VIEW ORDER
+====================================== */
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+
+    margin:0;
+    padding:0;
+
+    background:#fff7fb;
+
+    font-family:'Poppins',sans-serif;
+
+    color:#555;
+
+}
+
+.pageWrapper{
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:20px;
+
+}
+
+
+/* ===========================
+   HEADER
+=========================== */
+
+.topBar{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+.menuButton{
+
+    position:absolute;
+
+    left:0;
+
+    width:50px;
+    height:50px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#ffd7e7;
+
+    color:#cc4f8c;
+
+    font-size:26px;
+
+    cursor:pointer;
+
+}
+
+.logo{
+
+    width:170px;
+
+}
+
+.pageTitle{
+
+    text-align:center;
+
+    color:#cc4f8c;
+
+    font-size:32px;
+
+    margin-bottom:25px;
+
+}
+
+
+/* ===========================
+   HEADER CARD
+=========================== */
+
+.headerCard{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.headerCard h2{
+
+    margin:0;
+
+    color:#cc4f8c;
+
+    font-size:30px;
+
+}
+
+#customerNameHeader{
+
+    font-size:20px;
+
+    margin-top:12px;
+
+    font-weight:600;
+
+}
+
+.headerBadges{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    margin-top:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.headerBadges span{
+
+    background:#ffd7e7;
+
+    color:#cc4f8c;
+
+    padding:10px 18px;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+}
+
+
+/* ===========================
+   CARDS
+=========================== */
+
+.card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:25px;
+
+    margin-bottom:22px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.card h3{
+
+    margin-top:0;
+
+    margin-bottom:18px;
+
+    color:#cc4f8c;
+
+    font-size:22px;
+
+    border-bottom:2px solid #ffe3ef;
+
+    padding-bottom:10px;
+
+}
+
+.card p{
+
+    margin:8px 0;
+
+    line-height:1.7;
+
+}
+
+
+/* ===========================
+   ITEMS
+=========================== */
+
+.itemCard{
+
+    background:#fff9fc;
+
+    border:2px solid #ffe0ec;
+
+    border-radius:16px;
+
+    padding:18px;
+
+    margin-bottom:15px;
+
+}
+
+
+/* ===========================
+   PAYMENTS
+=========================== */
+
+.paymentCard{
+
+    background:#fff9fc;
+
+    border-left:5px solid #ff8fbc;
+
+    padding:15px;
+
+    margin-bottom:15px;
+
+    border-radius:12px;
+
+}
+
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.buttonRow{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-top:35px;
+
+    flex-wrap:wrap;
+
+}
+
+.primaryButton{
+
+    background:#ff8fbc;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 30px;
+
+    border-radius:40px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+.primaryButton:hover{
+
+    background:#f06ca4;
+
+}
+
+.secondaryButton{
+
+    background:#ffe3ef;
+
+    color:#cc4f8c;
+
+    border:none;
+
+    padding:15px 30px;
+
+    border-radius:40px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+.secondaryButton:hover{
+
+    background:#ffd3e5;
+
+}
+
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:700px){
+
+    .logo{
+
+        width:130px;
+
+    }
+
+    .pageTitle{
+
+        font-size:26px;
+
+    }
+
+    .headerCard{
+
+        padding:20px;
+
+    }
+
+    .card{
+
+        padding:18px;
+
+    }
+
+}
