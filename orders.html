@@ -103,8 +103,51 @@ placeholder="🔍 Search orders...">
 
 </section>
 
-<section
-id="ordersContainer">
+<section class="dashboardCard">
+
+<div class="cardHeader">
+
+📦 Orders
+
+</div>
+
+<div class="cardContent">
+
+<select id="statusFilter">
+
+<option value="all">All Orders</option>
+
+<option value="New Order">New Orders</option>
+
+<option value="Designing">Designing</option>
+
+<option value="Making">Making</option>
+
+<option value="Ready">Ready</option>
+
+<option value="Completed">Completed</option>
+
+</select>
+
+<br><br>
+
+<select id="sortOrders">
+
+<option value="newest">Newest First</option>
+
+<option value="oldest">Oldest First</option>
+
+<option value="due">Due Soon</option>
+
+<option value="payment">Outstanding Payments</option>
+
+</select>
+
+</div>
+
+</section>
+
+<section id="ordersContainer">
 
 </section>
 
